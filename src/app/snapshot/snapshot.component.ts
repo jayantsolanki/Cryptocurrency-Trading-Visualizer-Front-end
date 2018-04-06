@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { Headers } from '@angular/http';
-import { RequestOptions } from '@angular/http';
+// import { Headers } from '@angular/http';
+// import { RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-snapshot',
   templateUrl: './snapshot.component.html',
   styleUrls: ['./snapshot.component.css']
 })
-export class SnapshotComponent implements OnInit {
+export class SnapshotComponent implements OnInit {loggedData
 	submitted = true;
 	snapshot;
 	exchange;
