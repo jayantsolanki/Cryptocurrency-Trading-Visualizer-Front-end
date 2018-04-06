@@ -68,7 +68,13 @@ export class RealtimeUpdateComponent implements OnInit {
 					    cell3.innerHTML = obj.count;
 					    cell4.innerHTML = obj.exchange;
 					    cell5.innerHTML = obj.pairname;
-					   
+					    table.deleteRow(100);   
+					 //    setTimeout(function () {
+					 //    var table = document.getElementById("livedata");
+					 //    var rowCount = table.rows.length;
+
+					 //    table.deleteRow(5000);    
+						// }, 1)
 				    // console.log(obj);
 				}
 			  	// console.log(JSON.stringify(received_msg))
@@ -98,12 +104,7 @@ export class RealtimeUpdateComponent implements OnInit {
           //       }); 
           // })
        // }
-       setTimeout(function () {
-					    var table = document.getElementById("livedata");
-					    var rowCount = table.rows.length;
 
-					    table.deleteRow(rowCount - 1000);    
-						}, 1000)
   }
   refresh(data) {
   		// this.dataSource = new MatTableDataSource(this.loggedData);
