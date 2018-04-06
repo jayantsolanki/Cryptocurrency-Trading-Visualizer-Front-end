@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-// import { Headers } from '@angular/http';
-// import { RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-snapshot',

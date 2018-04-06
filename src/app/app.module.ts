@@ -6,16 +6,14 @@ import { AppComponent } from './app.component';
 import { SnapshotComponent } from './snapshot/snapshot.component';
 import { RouterModule, Routes } from '@angular/router';
 import { RealtimeUpdateComponent } from './realtime-update/realtime-update.component';
-import { WebsocketserveService } from './websocketserve.service';
-import { WebsocketService } from './websocket.service';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material';
-import {MatInputModule} from '@angular/material/input';
+//import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+//import { MatTableModule } from '@angular/material';
+//import {MatInputModule} from '@angular/material/input';
 //import {ReactiveFormsModule} from '@angular/forms'
 const appRoutes: Routes = [
   { path: 'noble-markets-order-book-snapshot', component: SnapshotComponent },
   { path: 'noble-markets-realtime-order-book', component: RealtimeUpdateComponent },
-  { path: 'dgf',
+  { path: '',
     redirectTo: 'noble-markets-realtime-order-book',
     pathMatch: 'full'
   }
@@ -34,16 +32,13 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     FormsModule,
-    HttpModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatInputModule
+    HttpModule
     //ReactiveFormsModule
   ],
   exports: [
             RouterModule
   ],
-  providers: [WebsocketserveService, WebsocketService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
