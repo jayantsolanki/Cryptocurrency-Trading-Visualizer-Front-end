@@ -18,6 +18,7 @@ export class RealtimeUpdateComponent implements OnInit {
 
   ngOnInit() {
 
+			// i tested with the websokcet services, but the problem in that was I was unable to json parse the incoming messages, all packets werestrings, parsing resulted in error, so i went to vanilla javascript
 			var ws = new WebSocket('ws://localhost:8888/noble-markets-realtime-order-book');
         
 			ws.onopen = function()
@@ -40,9 +41,9 @@ export class RealtimeUpdateComponent implements OnInit {
 					    var cell4 = row.insertCell(3);
 					    var cell5 = row.insertCell(4)
 					    cell1.innerHTML = obj.transactionType;
-					    cell2.innerHTML = obj.price;
-					    cell3.innerHTML = obj.count;
-					    cell4.innerHTML = obj.exchange;
+					    cell2.innerHTML = obj.exchange;
+					    cell3.innerHTML = obj.price;
+					    cell4.innerHTML = obj.count;
 					    cell5.innerHTML = obj.pairname;
 					    table.deleteRow(100); //hack to prevent table from getting too long
 				    }
